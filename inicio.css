@@ -66,6 +66,7 @@ body {
   /* borda da mensagem */
   border-radius: 10px;
   /* arredondamento das bordas da mensagem */
+  font-family: "EB Garamond", serif;
 }
 
 .mensagem p {
@@ -73,6 +74,8 @@ body {
   /* tamanho da fonte da mensagem */
   color: #000000;
   /* cor da fonte da mensagem */
+ 
+
 }
 
 footer {
