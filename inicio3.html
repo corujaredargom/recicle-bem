@@ -2,34 +2,58 @@
 <html>
 
 <head>
-  <title>Jogo Recicle.Bem</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Start Game</title>
+  <link rel="stylesheet" type="text/css" href="inicio.css">
   <style>
+   
   </style>
 </head>
-<h1 class="title">Recicle.Bem</h1>
-<p></p>
 
 <body>
-  <audio id="som-correto" src="som-correto.mp3" type="audio/mp3"></audio>
-  <audio id="som-errado" src="som-errado.mp3" type="audio/mp3"></audio>
-  <!-- Add a container element to group the game elements -->
-  <div id="container">
-    <h1 id="pergunta"></h1>
-    <div id="opcoes"></div>
-    <p id="resultado"></p>
-    <p id="pontuacao"></p>
-    <div id="fim-do-jogo"></div>
+
+  <h1 class="title">Bem-vindo ao Recicle Bem - Conhecimento em Reciclagem!</h1>
+
+  <div class="mensagem-container">
+    <div class="mensagem">
+      <p>
+      <h1>Um Pouco Sobre Nós</h1>
+      <h2>Somos site um com o objetivo de melhorar o meio ambiente, através da reciclagem e conscientização. Nossa missão é
+      ajudar a reduzir os resíduos e promover a sustentabilidade. Nossa visão é um mundo mais limpo.</h2>
+      </p>
+    </div>
+    <div class="mensagem">
+      <p>
+      <h1>Porque um jogo?</h1>
+      <h2>Criamos o jogo com o objetivo de interagir com o público de todas as idades, para tentar incentivá-los a manter um
+      ambiente mais limpo e sustentável, de maneira descontraída e interativa.</h2>
+      </p>
+    </div>
   </div>
   <svg class="leaf-animation" width="50" height="50" viewBox="0 0 100 100" fill="#4CAF50">
     <path d="M30,90 Q50,10 70,90 Q50,70 30,90 Z" />
   </svg>
-  <!-- Add a footer element to display the game credits -->
-  <footer>
-    <p>&copy; 2024 Recicle.Bem | Todos os direitos reservados.</p>
-  </footer>
+  <button id="start-button">Próxima</button>
+  <script>
 
-  <script src="script.js"></script>
+     // Criar múltiplas folhas animadas
+     for (let i = 0; i < 10; i++) {
+      createLeaf();
+    }
+
+    function createLeaf() {
+      const leaf = document.querySelector('.leaf-animation').cloneNode(true);
+      leaf.style.left = Math.random() * window.innerWidth + 'px';
+      leaf.style.animationDuration = (Math.random() * 5 + 5) + 's'; // Entre 5 e 10 segundos
+      leaf.style.animationDelay = (Math.random() * 5) + 's';
+      document.body.appendChild(leaf);
+    }
+
+    const startButton = document.getElementById("start-button");
+    startButton.addEventListener("click", () => {
+      window.location.href = "informacao.html";
+    });
+
+  </script>
 </body>
 
 </html>
