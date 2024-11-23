@@ -1,0 +1,270 @@
+<html><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recicle.bem - Receba Produtos Biodegradáveis</title>
+<style>
+  body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f7f4;
+    color: #333;
+  }
+  header {
+    background-color: #4CAF50;
+    padding: 10px 0 0;
+    color: white;
+  }
+  header p {
+    align-self: center;
+    font-size: 18px;
+    position: relative;
+    top: -15px;
+  }
+  h1 {
+    margin: 0;
+    font-size: 3.5em;
+    font-weight: 300;
+  }
+  nav {
+    background-color: #45a049;
+    padding: 10px 0;
+  }
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+  nav ul li {
+    margin: 0 15px;
+  }
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.5s ease-in-out
+  }
+  nav ul li a:hover {
+    color: #b7e4c7;
+  }
+  main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+  }
+  .product-card {
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-direction: column;
+    align-items: center;
+  }
+  .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  .product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  .product-info {
+    padding: 20px;
+  }
+  .product-title {
+    font-size: 1.2em;
+    margin: 0 0 0 0;
+  }
+  .product-description {
+    font-size: 0.9em;
+    color: #4a4a4a;
+    margin-bottom: 15px;
+  }
+  .request-btn {
+    display: block;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  .request-btn:hover {
+    background-color: #1b4332;
+  }
+  footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+  }
+  .leaf-animation {
+      position: fixed;
+      top: -50px;
+      animation: falling 10s linear infinite;
+      z-index: -1;
+    }
+
+    @keyframes falling {
+      0% {
+        transform: translateY(-50px) rotate(0deg);
+      }
+
+      100% {
+        transform: translateY(100vh) rotate(360deg);
+      }
+    }
+</style>
+</head>
+<body>
+  <header style="display: flex; flex-direction: column; align-items: center;">
+    <div style="display: flex; align-items: center;">
+      <img src="./Nova pasta.png/1-removebg-preview-removebg-preview.png" width="70px">
+      <h1>Recicle.bem</h1>
+    </div>
+    <p>Receba Produtos Biodegradáveis</p>
+  </header>
+  
+  <nav>
+    <ul>
+      <li><a href="./inicio2.html">Início</a></li>
+      <li><a href="./doar.html">Doar</a></li>
+      <li><a href="./sobre.html">Sobre Nós</a></li>
+      <li><a href="./contato.html">Contato</a></li>
+      <li><a href="./solicitar.html">Solicitação</a></li>
+      <li> <a href="./inicio3.html">Jogo Educativo</a></li> 
+
+    </ul>
+  </nav>
+  
+  <main>
+    <h2>Produtos Biodegradáveis Disponíveis</h2>
+    <p>Explore nossa seleção de produtos biodegradáveis disponíveis para receber. Ajude o meio ambiente enquanto adquire itens úteis!</p>
+    
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="./Nova pasta.png/escova_de_dente_de_bambu_marrom_7a93abf3-98ca-4509-b443-e7550daaa117.webp" alt="Escova de dentes de bambu, estilo minimalista" class="product-image" width="250" height="200">
+        <div class="product-info">
+          <h3 class="product-title">Escova de Dentes de Bambu</h3>
+          <p class="product-description">Escova de dentes ecológica feita de bambu. Cerdas macias e cabo biodegradável.</p>
+          <a href="./solicitar.html" class="request-btn">Solicitar</a>
+        </div>
+      </div>
+      
+      <div class="product-card">
+        <img src="./Nova pasta.png/Talheres de Bambu.png" alt="Conjunto de talheres de bambu, incluindo garfo, faca e colher" class="product-image" width="250" height="200">
+        <div class="product-info">
+          <h3 class="product-title">Conjunto de Talheres de Bambu</h3>
+          <p class="product-description">Kit de talheres reutilizáveis feitos de bambu. Inclui garfo, faca e colher.</p>
+          <a href="./solicitar.html" class="request-btn">Solicitar</a>
+        </div>
+      </div>
+      
+      <div class="product-card">
+        <img src="./Nova pasta.png/716Z9XexC+L._AC_UF894,1000_QL80_.jpg" alt="Pratos descartáveis compostáveis feitos de folha de palmeira" class="product-image" width="250" height="200">
+        <div class="product-info">
+          <h3 class="product-title">Pratos Compostáveis</h3>
+          <p class="product-description">Pratos descartáveis feitos de folha de palmeira. 100% biodegradáveis e compostáveis.</p>
+          <a href="./solicitar.html" class="request-btn">Solicitar</a>
+        </div>
+      </div>
+      
+      <div class="product-card">
+        <img src="./Nova pasta.png/Sacola-Reciclavel-Personalizada.png" alt="Sacolas reutilizáveis de malha para frutas e vegetais" class="product-image" width="250" height="200">
+        <div class="product-info">
+          <h3 class="product-title">Sacolas Reutilizáveis para Frutas e Vegetais</h3>
+          <p class="product-description">Sacolas de malha leve e resistente para compras de frutas e vegetais. Lavável e durável.</p>
+          <a href="./solicitar.html" class="request-btn">Solicitar</a>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <footer>
+    <p>&copy; 2024 Recicle.bem. Todos os direitos reservados.</p>
+  </footer>
+  <svg class="leaf-animation" width="50" height="50" viewBox="0 0 100 100" fill="#4CAF50">
+    <path d="M30,90 Q50,10 70,90 Q50,70 30,90 Z" />
+  </svg>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+ // Criar múltiplas folhas animadas
+ for (let i = 0; i < 10; i++) {
+        createLeaf();
+      }
+
+      function createLeaf() {
+        const leaf = document.querySelector('.leaf-animation').cloneNode(true);
+        leaf.style.left = Math.random() * window.innerWidth + 'px';
+        leaf.style.animationDuration = (Math.random() * 5 + 5) + 's'; // Entre 5 e 10 segundos
+        leaf.style.animationDelay = (Math.random() * 5) + 's';
+        document.body.appendChild(leaf);
+      }
+
+     
+      // Adicionar efeito de hover nos botões CTA
+      document.querySelectorAll('.cta-button').forEach(button => {
+        button.addEventListener('mouseover', function () {
+          this.style.transform = 'scale(1.05)';
+        });
+        button.addEventListener('mouseout', function () {
+          this.style.transform = 'scale(1)';
+        });
+      });
+    });
+  // Animate product cards on scroll
+  const productCards = document.querySelectorAll('.product-card');
+  
+  function checkScroll() {
+    productCards.forEach(card => {
+      const cardTop = card.getBoundingClientRect().top;
+      const cardBottom = card.getBoundingClientRect().bottom;
+      
+      if (cardTop < window.innerHeight && cardBottom > 0) {
+        card.style.opacity = '1';
+        card.style.transform = 'translateY(0)';
+      }
+    });
+  }
+  
+  // Set initial state
+  productCards.forEach(card => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(20px)';
+    card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+  });
+  
+  // Check scroll on load
+  checkScroll();
+  
+  // Check scroll on scroll event
+  window.addEventListener('scroll', checkScroll);
+  
+  // Add hover effect to request buttons
+  const requestBtns = document.querySelectorAll('.request-btn');
+  
+  requestBtns.forEach(btn => {
+    btn.addEventListener('mouseover', function() {
+      this.style.transform = 'scale(1.05)';
+    });
+    
+    btn.addEventListener('mouseout', function() {
+      this.style.transform = 'scale(1)';
+    });
+  });
+
+</script>
+
+</body></html>

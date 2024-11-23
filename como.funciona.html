@@ -1,0 +1,384 @@
+<html><head><base href=>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Como Funciona - Recicle.bem</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@600;700&display=swap');
+    
+      :root {
+        --primary-color: #2ecc71;
+        --primary-dark: #27ae60;
+        --text-dark: #2c3e50;
+        --text-light: #7f8c8d;
+        --background: #f9f9f9;
+        --white: #ffffff;
+      }
+    
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+    
+      body {
+        font-family: 'Roboto', sans-serif;
+        color: var(--text-dark);
+        line-height: 1.6;
+      }
+    
+      .header {
+        background-color: var(--white);
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+      }
+    
+      .nav-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    
+      .logo {
+        color: var(--primary-color);
+        text-decoration: none;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+    
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+      }
+    
+      .nav-links a {
+        color: var(--text-dark);
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+    
+      .nav-links a:hover {
+        color: var(--primary-color);
+      }
+    
+      .page-header {
+        background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+        padding: 8rem 2rem 4rem;
+        text-align: center;
+        color: var(--white);
+      }
+    
+      .process-section {
+        padding: 4rem 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+    
+      .process-step {
+        display: flex;
+        align-items: center;
+        margin-bottom: 4rem;
+        gap: 2rem;
+      }
+    
+      .process-step:nth-child(even) {
+        flex-direction: row-reverse;
+      }
+    
+      .step-content {
+        flex: 1;
+      }
+    
+      .step-image {
+        flex: 1;
+        position: relative;
+        height: 300px;
+        background: var(--background);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+    
+      .step-number {
+        font-size: 4rem;
+        font-weight: bold;
+        color: var(--primary-color);
+        opacity: 0.2;
+        position: absolute;
+        top: -20px;
+        left: -20px;
+      }
+    
+      .step-title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        color: var(--primary-color);
+      }
+    
+      .rewards-section {
+        background: var(--background);
+        padding: 4rem 2rem;
+      }
+    
+      .rewards-container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+    
+      .rewards-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+    
+      .reward-card {
+        background: var(--white);
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        text-align: center;
+      }
+    
+      .reward-icon {
+        width: 60px;
+        height: 60px;
+        margin: 0 auto 1rem;
+        fill: var(--primary-color);
+      }
+    
+      .faq-section {
+        padding: 4rem 2rem;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+    
+      .faq-item {
+        margin-bottom: 1.5rem;
+      }
+    
+      .faq-question {
+        background: var(--white);
+        padding: 1.5rem;
+        border-radius: 8px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+    
+      .faq-answer {
+        padding: 1.5rem;
+        background: var(--background);
+        border-radius: 0 0 8px 8px;
+        margin-top: 2px;
+        display: none;
+      }
+    
+      .faq-question.active + .faq-answer {
+        display: block;
+      }
+    
+      .cta-section {
+        text-align: center;
+        padding: 4rem 2rem;
+        background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+        color: var(--white);
+      }
+    
+      .cta-button {
+        display: inline-block;
+        background: var(--white);
+        color: var(--primary-color);
+        padding: 1rem 2rem;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: bold;
+        margin-top: 2rem;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+    
+      .cta-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      }
+    
+      @media (max-width: 768px) {
+        .nav-links {
+          display: none;
+        }
+        
+        .process-step {
+          flex-direction: column !important;
+        }
+        
+        .rewards-grid {
+          grid-template-columns: 1fr;
+        }
+        
+        .step-image {
+          width: 100%;
+        }
+      }
+    </style>
+    </head>
+    <body>
+      <header class="header">
+        <nav class="nav-container">
+          <a href="./inicio.html" class="logo">Recicle.bem</a>
+          <div class="nav-links">
+            <a href="./sobre.html">Sobre</a>
+            <a href="./doar.html">Doar</a>
+            <a href="./contato.html">Contato</a>
+            <a href="./login.html">Entrar</a>
+            <a href="./inicio3.html">Jogo Educativo</a>
+
+          </div>
+        </nav>
+      </header>
+    
+      <section class="page-header">
+        <h1>Como Funciona o Recicle.bem</h1>
+        <p>Conheça o passo a passo para começar a transformar reciclagem em recompensas</p>
+      </section>
+    
+      <section class="process-section">
+        <div class="process-step">
+          <div class="step-content">
+            <h2 class="step-title">1. Cadastre-se na Plataforma</h2>
+            <p>Crie sua conta gratuitamente em menos de 5 minutos. Você só precisa fornecer algumas informações básicas e já pode começar a participar.</p>
+          </div>
+          <div class="step-image">
+            <div class="step-number">1</div>
+            <svg viewBox="0 0 24 24" style="width: 100%; height: 100%; padding: 20%;">
+              <path fill="currentColor" d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+              <circle cx="12" cy="7" r="4"/>
+            </svg>
+          </div>
+        </div>
+    
+        <div class="process-step">
+          <div class="step-content">
+            <h2 class="step-title">2. Separe seus Recicláveis</h2>
+            <p>Separe os materiais recicláveis por categoria: plástico, papel, metal e vidro. Certifique-se de que estejam limpos e secos.</p>
+          </div>
+          <div class="step-image">
+            <div class="step-number">2</div>
+            <svg viewBox="0 0 24 24" style="width: 100%; height: 100%; padding: 20%;">
+              <path fill="currentColor" d="M19 4h-3.5l-1-1h-5l-1 1H5v2h14M6 19a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7H6v12z"/>
+            </svg>
+          </div>
+        </div>
+    
+        <div class="process-step">
+          <div class="step-content">
+            <h2 class="step-title">3. Encontre um Ponto de Coleta</h2>
+            <p>Localize o ponto de coleta mais próximo de você através do nosso mapa interativo ou agende uma coleta domiciliar.</p>
+          </div>
+          <div class="step-image">
+            <div class="step-number">3</div>
+            <svg viewBox="0 0 24 24" style="width: 100%; height: 100%; padding: 20%;">
+              <path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/>
+            </svg>
+          </div>
+        </div>
+    
+        <div class="process-step">
+          <div class="step-content">
+            <h2 class="step-title">4. Ganhe Pontos</h2>
+            <p>Cada material reciclável depositado gera pontos na sua conta. Quanto mais você recicla, mais pontos acumula!</p>
+          </div>
+          <div class="step-image">
+            <div class="step-number">4</div>
+            <svg viewBox="0 0 24 24" style="width: 100%; height: 100%; padding: 20%;">
+              <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+            </svg>
+          </div>
+        </div>
+      </section>
+    
+      <section class="rewards-section">
+        <div class="rewards-container">
+          <h2>Troque seus Pontos</h2>
+          <div class="rewards-grid">
+            <div class="reward-card">
+              <svg class="reward-icon" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/>
+              </svg>
+              <h3>Descontos em Lojas</h3>
+              <p>Use seus pontos para obter descontos em estabelecimentos parceiros</p>
+            </div>
+            <div class="reward-card">
+              <svg class="reward-icon" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M20 3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H4V5h16v14z"/>
+              </svg>
+              <h3>Produtos Sustentáveis</h3>
+              <p>Troque por produtos eco-friendly de nossos parceiros</p>
+            </div>
+            <div class="reward-card">
+              <svg class="reward-icon" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1.41 16.09V20h-2.67v-1.93c-1.71-.36-3.16-1.46-3.27-3.4h1.96c.1 1.05.82 1.87 2.65 1.87 1.96 0 2.4-.98 2.4-1.59 0-.83-.44-1.61-2.67-2.14-2.48-.6-4.18-1.62-4.18-3.67 0-1.72 1.39-2.84 3.11-3.21V4h2.67v1.95c1.86.45 2.79 1.86 2.85 3.39H14.3c-.05-1.11-.64-1.87-2.22-1.87-1.5 0-2.4.68-2.4 1.64 0 .84.65 1.39 2.67 1.91s4.18 1.39 4.18 3.91c-.01 1.83-1.38 2.83-3.12 3.16z"/>
+              </svg>
+              <h3>Cashback</h3>
+              <p>Converta seus pontos em dinheiro de volta</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <section class="faq-section">
+        <h2>Perguntas Frequentes</h2>
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Quais materiais são aceitos?</h3>
+            <span class="toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Aceitamos papel, papelão, plástico, metal, vidro e eletrônicos. Todos os materiais devem estar limpos e secos.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Como os pontos são calculados?</h3>
+            <span class="toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Os pontos são calculados com base no peso e tipo de material reciclável. Cada categoria tem sua própria pontuação por quilo.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Quanto tempo os pontos são válidos?</h3>
+            <span class="toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Os pontos têm validade de 12 meses a partir da data em que foram creditados na sua conta.</p>
+          </div>
+        </div>
+      </section>
+    
+      <section class="cta-section">
+        <h2>Pronto para Começar?</h2>
+        <p>Junte-se a milhares de pessoas que já estão fazendo a diferença</p>
+        <a href="./cadastro.html" class="cta-button">Criar Conta Grátis</a>
+      </section>
+    
+      <script>
+        // FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(question => {
+          question.addEventListener('click', () => {
+            question.classList.toggle('active');
+            const toggle = question.querySelector('.toggle');
+            toggle.textContent = question.classList.contains('active') ? '-' : '+';
+          });
+        });
+      </script>
+    </body></html>

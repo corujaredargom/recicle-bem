@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Jogo Recicle.Bem</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+  </style>
+</head>
+<h1 class="title">Recicle.Bem</h1>
+<p></p>
+
+<body>
+  <audio id="som-correto" src="som-correto.mp3" type="audio/mp3"></audio>
+  <audio id="som-errado" src="som-errado.mp3" type="audio/mp3"></audio>
+  <!-- Add a container element to group the game elements -->
+  <div id="container">
+    <h1 id="pergunta"></h1>
+    <div id="opcoes"></div>
+    <p id="resultado"></p>
+    <p id="pontuacao"></p>
+    <div id="fim-do-jogo"></div>
+  </div>
+  <svg class="leaf-animation" width="50" height="50" viewBox="0 0 100 100" fill="#4CAF50">
+    <path d="M30,90 Q50,10 70,90 Q50,70 30,90 Z" />
+  </svg>
+  <!-- Add a footer element to display the game credits -->
+  <footer>
+    <p>&copy; 2024 Recicle.Bem | Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

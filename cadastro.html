@@ -1,0 +1,342 @@
+<html><head><base href=>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recicle.bem  - Cadastro</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+    
+      :root {
+        --primary-color: #2ecc71;
+        --primary-dark: #27ae60;
+        --text-dark: #2c3e50;
+        --text-light: #7f8c8d;
+        --background: #ecf0f1;
+        --white: #ffffff;
+        --error: #e74c3c;
+      }
+    
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+    
+      body, html {
+        font-family: 'Roboto', sans-serif;
+        background-color: var(--background);
+        height: 100%;
+      }
+    
+      .container {
+        display: flex;
+        min-height: 100vh;
+      }
+    
+      .signup-image {
+        flex: 1;
+        background: linear-gradient(rgba(46, 204, 113, 0.9), rgba(46, 204, 113, 0.9)),
+                    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="%232ecc71"/><circle cx="50" cy="50" r="40" fill="none" stroke="%23fff" stroke-width="2"/></svg>');
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+      }
+    
+      .signup-content {
+        width: 100%;
+        max-width: 600px;
+        padding: 2rem;
+        background: var(--white);
+      }
+    
+      .signup-box {
+        padding: 2rem;
+      }
+    
+      .signup-header {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+    
+      .signup-header h1 {
+        color: var(--primary-color);
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+      }
+    
+      .signup-header p {
+        color: var(--text-light);
+      }
+    
+      .form-group {
+        margin-bottom: 1.5rem;
+      }
+    
+      .form-row {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+      }
+    
+      .form-group label {
+        display: block;
+        margin-bottom: 0.5rem;
+        color: var(--text-dark);
+        font-weight: 500;
+      }
+    
+      .form-group input, .form-group select {
+        width: 100%;
+        padding: 0.8rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 1rem;
+        transition: border-color 0.3s ease;
+      }
+    
+      .form-group input:focus, .form-group select:focus {
+        outline: none;
+        border-color: var(--primary-color);
+      }
+    
+      .password-requirements {
+        font-size: 0.8rem;
+        color: var(--text-light);
+        margin-top: 0.5rem;
+      }
+    
+      .terms {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.5rem;
+        margin-bottom: 1.5rem;
+      }
+    
+      .terms input[type="checkbox"] {
+        margin-top: 0.25rem;
+      }
+    
+      .terms label {
+        font-size: 0.9rem;
+        color: var(--text-dark);
+      }
+    
+      .terms a {
+        color: var(--primary-color);
+        text-decoration: none;
+      }
+    
+      .terms a:hover {
+        text-decoration: underline;
+      }
+    
+      .signup-button {
+        width: 100%;
+        padding: 1rem;
+        background-color: var(--primary-color);
+        color: var(--white);
+        border: none;
+        border-radius: 4px;
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+    
+      .signup-button:hover {
+        background-color: var(--primary-dark);
+      }
+    
+      .login-link {
+        text-align: center;
+        margin-top: 1.5rem;
+      }
+    
+      .login-link a {
+        color: var(--primary-color);
+        text-decoration: none;
+      }
+    
+      .login-link a:hover {
+        text-decoration: underline;
+      }
+    
+      .error-message {
+        display: none;
+        background-color: #ffebee;
+        color: var(--error);
+        padding: 0.8rem;
+        border-radius: 4px;
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+    
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+        }
+        
+        .signup-image {
+          display: none;
+        }
+        
+        .signup-content {
+          max-width: 100%;
+        }
+        
+        .form-row {
+          flex-direction: column;
+          gap: 0;
+        }
+      }
+    </style>
+    </head>
+    <body>
+      <div class="container">
+        <div class="signup-image">
+            <img src="./Nova pasta.png/1-removebg-preview-removebg-preview.png" width="700px">
+            <path d="M15,14C12.33,14 7,15.33 7,18V20H23V18C23,15.33 17.67,14 15,14M6,10V7H4V10H1V12H4V15H6V12H9V10M15,12A4,4 0 0,0 19,8A4,4 0 0,0 15,4A4,4 0 0,0 11,8A4,4 0 0,0 15,12Z"/>
+          </svg>
+        </div>
+    
+        <div class="signup-content">
+          <div class="signup-box">
+            <div class="signup-header">
+              <h1>Criar Conta</h1>
+              <p>Junte-se à comunidade Recicle.bem </p>
+            </div>
+    
+            <div id="error-message" class="error-message"></div>
+    
+            <form id="signup-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="firstName">Nome</label>
+                  <input type="text" id="firstName" required>
+                </div>
+                <div class="form-group">
+                  <label for="lastName">Sobrenome</label>
+                  <input type="text" id="lastName" required>
+                </div>
+              </div>
+    
+              <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" required>
+              </div>
+    
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="password">Senha</label>
+                  <input type="password" id="password" required>
+                  <div class="password-requirements">
+                    Mínimo 8 caracteres, incluindo letras maiúsculas, minúsculas e números
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="confirmPassword">Confirmar Senha</label>
+                  <input type="password" id="confirmPassword" required>
+                </div>
+              </div>
+    
+              <div class="form-group">
+                <label for="phone">Telefone</label>
+                <input type="tel" id="phone" placeholder="(00) 00000-0000" required>
+              </div>
+    
+              <div class="form-group">
+                <label for="type">Tipo de Conta</label>
+                <select id="type" required>
+                  <option value="">Selecione...</option>
+                  <option value="doador">Doador</option>
+                  <option value="receptor">Receptor</option>
+                  <option value="receptor">trasportadora</option>
+                  <option value="ambos">Ambos</option>
+                </select>
+              </div>
+    
+              <div class="terms">
+                <input type="checkbox" id="terms" required>
+                <label for="terms">
+                  Li e concordo com os <a href="/termos.html">Termos de Uso</a> e a 
+                  <a href="./politica.html">Política de Privacidade</a>
+                </label>
+              </div>
+    
+              <button type="submit" class="signup-button">Criar Conta</button>
+            </form>
+    
+            <div class="login-link">
+              Já tem uma conta? <a href="./login.html">Fazer login</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <script>
+        document.getElementById('signup-form').addEventListener('submit', function(e) {
+          e.preventDefault();
+          
+          const firstName = document.getElementById('firstName').value;
+          const lastName = document.getElementById('lastName').value;
+          const email = document.getElementById('email').value;
+          const password = document.getElementById('password').value;
+          const confirmPassword = document.getElementById('confirmPassword').value;
+          const phone = document.getElementById('phone').value;
+          const type = document.getElementById('type').value;
+          const terms = document.getElementById('terms').checked;
+          
+          // Validação básica
+          if (password !== confirmPassword) {
+            showError('As senhas não correspondem');
+            return;
+          }
+          
+          if (password.length < 8) {
+            showError('A senha deve ter pelo menos 8 caracteres');
+            return;
+          }
+          
+          if (!terms) {
+            showError('Você deve aceitar os termos de uso e a política de privacidade');
+            return;
+          }
+          
+          // Simula envio do formulário
+          console.log('Cadastro:', {
+            firstName,
+            lastName,
+            email,
+            phone,
+            type
+          });
+          
+          // Redireciona para a página de sucesso
+          window.location.href = './inicio.html';
+        });
+    
+        function showError(message) {
+          const errorElement = document.getElementById('error-message');
+          errorElement.textContent = message;
+          errorElement.style.display = 'block';
+          setTimeout(() => {
+            errorElement.style.display = 'none';
+          }, 3000);
+        }
+    
+        // Máscara para telefone
+        document.getElementById('phone').addEventListener('input', function (e) {
+          let value = e.target.value.replace(/\D/g, '');
+          if (value.length > 11) value = value.slice(0, 11);
+          
+          if (value.length > 2) {
+            value = `(${value.slice(0,2)}) ${value.slice(2)}`;
+          }
+          if (value.length > 9) {
+            value = `${value.slice(0,9)}-${value.slice(9)}`;
+          }
+          
+          e.target.value = value;
+        });
+      </script>
+    </body></html>

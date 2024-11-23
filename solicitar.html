@@ -1,0 +1,253 @@
+<html><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recicle.bem- </title>
+<style>
+  body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f7f4;
+    color: #1e3932;
+  }
+  header {
+    background-color: #2e8b57;
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+  }
+  h1 {
+    margin: 0;
+    font-size: 2.5em;
+  }
+  nav {
+    background-color: #45a049;
+    padding: 10px 0;
+  }
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+  nav ul li {
+    margin: 0 15px;
+  }
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  form {
+    display: grid;
+    gap: 20px;
+  }
+  label {
+    font-weight: bold;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  textarea,
+  select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+  }
+  button[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  .eco-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+  footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+  }
+  .progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+  .progress {
+    width: 33%;
+    height: 100%;
+    background-color: #4CAF50;
+    transition: width 0.5s ease;
+  }
+</style>
+</head>
+<body>
+  <header style="display: flex; flex-direction: column; align-items: center;">
+    <div style="display: flex; align-items: center;">
+      <img src="./Nova pasta.png/1-removebg-preview-removebg-preview.png" width="70px">
+      <h1>Recicle.bem</h1>
+    </div>
+    <p>Receba Produtos Biodegradáveis</p>
+  </header>
+  
+  <nav>
+    <ul>
+      <li><a href="./inicio2.html">Início</a></li>
+      <li><a href="./sobre.html">Sobre Nós</a></li>
+      <li><a href="./contato.html">Contato</a></li>
+      <li><a href="./estoque.html">Estoque</a></li>
+      <li> <a href="./inicio3.html">Jogo Educativo</a></li> 
+
+    </ul>
+  </nav>
+  
+  <main>
+    <h2>Solicite seu produtos </h2>
+    
+    <div class="progress-bar">
+      <div class="progress"></div>
+    </div>
+
+    <form id="brushRequestForm">
+      <div>
+        <label for="name">Nome Completo:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      
+      <div>
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      
+      <div>
+        <label for="address">Endereço de Entrega:</label>
+        <textarea id="address" name="address" rows="3" required></textarea>
+      </div>
+      
+      <div>
+        <label for="quantity">Quantidade de produtos:</label>
+        <input type="number" id="quantity" name="quantity" min="1" max="10" required>
+      </div>
+      
+      <div>
+        <label for="reason">Qual o produto voce quer?</label>
+        <select id="reason" name="reason" required>
+          <option value="">Selecione uma opção</option>
+          <option value="eco">Sacolas de papel</option>
+          <option value="health">Utensílios de madeira ou bambu</option>
+          <option value="curiosity">Canudos de papel ou bambu </option>
+          <option value="eco">Detergentes e sabões biodegradáveis</option>
+          <option value="eco">Embalagens de bioplástico</option>
+          <option value="eco">Produtos de limpeza em pó </option>
+          <option value="eco">Roupas de fibras naturais</option>
+          <option value="other">Outro motivo</option>
+
+        </select>
+      </div>
+      
+      <div>
+        <label for="commitment">Compromisso Ecológico:</label>
+        <textarea id="commitment" name="commitment" rows="4" placeholder="Descreva brevemente como você se compromete a usar e descartar adequadamente as escovas de bambu." required></textarea>
+      </div>
+      
+      <button type="submit">
+        <svg class="eco-icon" viewBox="0 0 24 24" fill="#ffffff">
+          <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/>
+        </svg>
+        Enviar Solicitação
+      </button>
+    </form>
+  </main>
+  
+  <footer>
+    <p>&copy; 2024 Recicle.bem. Todos os direitos reservados.</p>
+  </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('brushRequestForm');
+  const progressBar = document.querySelector('.progress');
+  
+  form.addEventListener('input', updateProgress);
+  
+  function updateProgress() {
+    const inputs = form.querySelectorAll('input, textarea, select');
+    let filledInputs = 0;
+    
+    inputs.forEach(input => {
+      if (input.value.trim() !== '') {
+        filledInputs++;
+      }
+    });
+    
+    const progress = (filledInputs / inputs.length) * 100;
+    progressBar.style.width = `${progress}%`;
+  }
+  
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Simular envio do formulário
+    const submitButton = form.querySelector('button[type="submit"]');
+    submitButton.disabled = true;
+    submitButton.textContent = 'Enviando...';
+    
+    setTimeout(() => {
+      alert('Sua solicitação foi enviada com sucesso! Entraremos em contato em breve.');
+      form.reset();
+      progressBar.style.width = '0%';
+      submitButton.disabled = false;
+      submitButton.innerHTML = '<svg class="eco-icon" viewBox="0 0 24 24" fill="#ffffff"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Enviar Solicitação';
+    }, 2000);
+  });
+  
+  // Adicionar efeito de hover no botão de envio
+  const submitButton = form.querySelector('button[type="submit"]');
+  submitButton.addEventListener('mouseover', function() {
+    this.style.transform = 'scale(1.05)';
+  });
+  submitButton.addEventListener('mouseout', function() {
+    this.style.transform = 'scale(1)';
+  });
+  
+  // Adicionar validação em tempo real
+  const inputs = form.querySelectorAll('input, textarea, select');
+  inputs.forEach(input => {
+    input.addEventListener('blur', function() {
+      if (this.value.trim() === '' && this.required) {
+        this.style.borderColor = 'red';
+      } else {
+        this.style.borderColor = '#ddd';
+      }
+    });
+  });
+});
+</script>
+
+</body></html>

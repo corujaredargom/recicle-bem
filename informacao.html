@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Informações</title>
+  <link rel="stylesheet" type="text/css" href="informacao.css">
+  <style>
+  </style>
+</head>
+
+<body>
+
+  <h1 class="title">Bem-vindo ao Recicle Bem - Preservando o Meio Ambiente!</h1>
+
+  <div class="mensagem-container">
+    <div class="mensagem">
+      <h3> Uma das principais formas de reduzir o impacto ambiental é reduzir a quantidade de resíduos que geramos. Aqui
+        estão algumas dicas para você começar:</h3>
+
+      <li>Reduzir o uso de plásticos e produtos descartáveis</li>
+      <li> Reutilizar sacolas, garrafas e outros materiais sempre que possível</li>
+      <li> Reciclar papel, vidro, metal e outros materiais</li>
+    </div>
+    <div class="mensagem">
+      <h3>INFORMAÇÕES:</h3>
+     <li>Cada pergunta terá apenas uma reposta correta</li>
+      <li>O jogo é dividido em 10 perguntas</li>
+      <li>Cada pergunta terá o valor de 10 pontos.</li>
+    </div>
+    <h3 class="f">AGORA VAMOS TESTAR SEU CONHECIMENTO SOBRE O MEIO AMBIENTE!!!</h3>
+  </div>
+
+  <button id="start-button">Iniciar Jogo</button>
+  <svg class="leaf-animation" width="50" height="50" viewBox="0 0 100 100" fill="#4CAF50">
+    <path d="M30,90 Q50,10 70,90 Q50,70 30,90 Z" />
+  </svg>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Criar múltiplas folhas animadas
+      for (let i = 0; i < 10; i++) {
+        createLeaf();
+      }
+
+      function createLeaf() {
+        const leaf = document.querySelector('.leaf-animation').cloneNode(true);
+        leaf.style.left = Math.random() * window.innerWidth + 'px';
+        leaf.style.animationDuration = (Math.random() * 5 + 5) + 's'; // Entre 5 e 10 segundos
+        leaf.style.animationDelay = (Math.random() * 5) + 's';
+        document.body.appendChild(leaf);
+      }
+    });
+    const startButton = document.getElementById("start-button");
+    startButton.addEventListener("click", () => {
+      window.location.href = "index.html";
+    });
+  </script>
+</body>
+
+</html>

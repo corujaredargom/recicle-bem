@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Start Game</title>
+  <link rel="stylesheet" type="text/css" href="inicio.css">
+  <style>
+  </style>
+</head>
+
+<body>
+
+  <h1 class="title">Bem-vindo ao Recicle Bem - Conhecimento em Reciclagem!</h1>
+
+  <div class="mensagem-container">
+    <div class="mensagem">
+      <p>
+      <h2>Um Pouco Sobre Nós</h2>
+      Somos site um com o objetivo de melhorar o meio ambiente, através da reciclagem e conscientização. Nossa missão é
+      ajudar a reduzir os resíduos e promover a sustentabilidade. Nossa visão é um mundo mais limpo e alcançar a
+      sustentabilidade.
+      </p>
+    </div>
+    <div class="mensagem">
+      <p>
+      <h2>Porque um jogo?</h2>
+      Criamos o jogo com o objetivo de interagir com o público de todas as idades, para tentar incentivá-los a manter um
+      ambiente mais limpo e sustentável, de maneira descontraída e interativa.
+      </p>
+    </div>
+  </div>
+  <svg class="leaf-animation" width="50" height="50" viewBox="0 0 100 100" fill="#4CAF50">
+    <path d="M30,90 Q50,10 70,90 Q50,70 30,90 Z" />
+  </svg>
+  <button id="start-button">Próxima</button>
+  <script>
+
+     // Criar múltiplas folhas animadas
+     for (let i = 0; i < 10; i++) {
+      createLeaf();
+    }
+
+    function createLeaf() {
+      const leaf = document.querySelector('.leaf-animation').cloneNode(true);
+      leaf.style.left = Math.random() * window.innerWidth + 'px';
+      leaf.style.animationDuration = (Math.random() * 5 + 5) + 's'; // Entre 5 e 10 segundos
+      leaf.style.animationDelay = (Math.random() * 5) + 's';
+      document.body.appendChild(leaf);
+    }
+
+    const startButton = document.getElementById("start-button");
+    startButton.addEventListener("click", () => {
+      window.location.href = "informacao.html";
+    });
+
+  </script>
+</body>
+
+</html>

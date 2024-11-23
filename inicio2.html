@@ -1,0 +1,239 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recicle.bem - Doação e Recepção de Produtos Biodegradáveis</title>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f7f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #4CAF50;
+      padding: 20px 0;
+      text-align: center;
+      color: white;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    nav {
+      background-color: #45a049;
+      padding: 10px 0;
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .product-card {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 15px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      margin-top: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #45a049;
+    }
+
+    footer {
+      background-color: #4CAF50;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+
+    .leaf-animation {
+      position: fixed;
+      top: -50px;
+      animation: falling 10s linear infinite;
+      z-index: -1;
+    }
+
+    @keyframes falling {
+      0% {
+        transform: translateY(-50px) rotate(0deg);
+      }
+
+      100% {
+        transform: translateY(100vh) rotate(360deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header style="display: flex; flex-direction: column; align-items: center;">
+    <div style="display: flex; align-items: center;">
+      <img src="./Nova pasta.png/1-removebg-preview-removebg-preview.png" width="70px">
+      <h1>Recicle.bem</h1>
+    </div>
+    <p>Receba Produtos Biodegradáveis</p>
+  </header>
+    <nav>
+      <ul>
+        <li><a href="./doar.html">Doar</a></li>
+        <li><a href="./sobre.html">Sobre Nós</a></li>
+        <li><a href="./contato.html">Contato</a></li>
+        <li><a href="./solicitar.html">Solicitação</a></li>
+        <li><a href="./estoque.html">Estoque</a></li>
+        <li> <a href="./inicio3.html">Jogo Educativo</a></li> 
+
+      </ul>
+    </nav>
+    <main>
+    <section id="doar">
+      <h2>Doar Produtos</h2>
+      <p>Tem produtos biodegradáveis que não usa mais? Doe-os aqui e ajude o meio ambiente!</p>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="./Nova pasta.png/Talheres de Bambu.png" alt="Talheres de bambu em fundo branco" width="200"
+            height="150">
+          <h3>Talheres de Bambu</h3>
+          <a href="./doar.html" class="cta-button">Doar</a>
+        </div>
+        <div class="product-card">
+          <img src="./Nova pasta.png/images (3).jpeg" alt="Sacolas de juta coloridas empilhadas"
+            width="200" height="150">
+          <h3>Sacolas de Juta</h3>
+          <a href="./doar.html" class="cta-button">Doar</a>
+        </div>
+        <!-- Adicione mais cards de produtos aqui -->
+      </div>
+    </section>
+
+    <section id="receber">
+      <h2>Receber Produtos</h2>
+      <p>Precisa de produtos biodegradáveis? Confira o que temos disponível!</p>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="./Nova pasta.png/images (1).jpeg" alt="Canudos de papel coloridos em pote de vidro"
+            width="200" height="150">
+          <h3>Canudos de Papel</h3>
+          <a href="./solicitar.html" class="cta-button">Solicitar</a>
+        </div>
+        <div class="product-card">
+          <img src="./Nova pasta.png/images (2).jpeg"
+            alt="Escovas de dente de bambu em suporte de madeira" width="200" height="150">
+          <h3>Escovas de Dente de Bambu</h3>
+          <a href="./solicitar.html" class="cta-button">Solicitar</a>
+        </div>
+        <!-- Adicione mais cards de produtos aqui -->
+      </div>
+    </section>
+
+    
+      <h2>Sobre Nós</h2>
+      <p>A Recicle.bem é uma plataforma dedicada a conectar pessoas que desejam doar produtos biodegradáveis com aquelas
+        que precisam desses itens. Nossa missão é reduzir o desperdício e promover um estilo de vida mais sustentável.
+      </p>
+    </section>
+
+   
+      <h2>Contato</h2>
+      <p>Entre em contato conosco para mais informações ou sugestões:</p>
+      <p>Email: contato@Recicle.bem.eco</p>
+      <p>Telefone: (11) 1234-5678</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Recicle.bem. Todos os direitos reservados.</p>
+  </footer>
+
+  <svg class="leaf-animation" width="50" height="50" viewBox="0 0 100 100" fill="#4CAF50">
+    <path d="M30,90 Q50,10 70,90 Q50,70 30,90 Z" />
+  </svg>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Criar múltiplas folhas animadas
+      for (let i = 0; i < 10; i++) {
+        createLeaf();
+      }
+
+      function createLeaf() {
+        const leaf = document.querySelector('.leaf-animation').cloneNode(true);
+        leaf.style.left = Math.random() * window.innerWidth + 'px';
+        leaf.style.animationDuration = (Math.random() * 5 + 5) + 's'; // Entre 5 e 10 segundos
+        leaf.style.animationDelay = (Math.random() * 5) + 's';
+        document.body.appendChild(leaf);
+      }
+
+     
+      // Adicionar efeito de hover nos botões CTA
+      document.querySelectorAll('.cta-button').forEach(button => {
+        button.addEventListener('mouseover', function () {
+          this.style.transform = 'scale(1.05)';
+        });
+        button.addEventListener('mouseout', function () {
+          this.style.transform = 'scale(1)';
+        });
+      });
+    });
+  </script>
+
+</body>
+
+</html>

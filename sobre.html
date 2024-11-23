@@ -1,0 +1,294 @@
+<html><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recicle.bem - Sobre Nós</title>
+<style>
+  body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f7f4;
+    color: #333;
+    line-height: 1.6;
+  }
+  header {
+    background-color: #4CAF50;
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+  }
+  h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: 300;
+  }
+  nav {
+    background-color: #45a049;
+    padding: 10px 0;
+  }
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+  nav ul li {
+    margin: 0 15px;
+  }
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  nav ul li a:hover {
+    color: #7fffd4;
+  }
+  main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  .about-section {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+  }
+  .mission-vision {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+  .mission, .vision {
+    flex-basis: 48%;
+    background-color: #e8f5e9;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  .team-section {
+    margin-top: 40px;
+  }
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+  }
+  .team-member {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  .team-member:hover {
+    transform: translateY(-5px);
+  }
+  .team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  footer {
+      background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+  }
+  .eco-impact {
+    background-color: #dff0d8;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 40px;
+  }
+  .eco-impact h3 {
+    color: #27ae60;
+    margin-top: 0;
+  }
+  .impact-stats {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  .stat-item {
+    text-align: center;
+    margin: 10px;
+  }
+  .stat-number {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #27ae60;
+  }
+  .stat-label {
+    font-size: 0.9em;
+    color: #555;
+  }
+</style>
+</head>
+<body>
+  <header style="display: flex; flex-direction: column; align-items: center;">
+    <div style="display: flex; align-items: center;">
+      <img src="./Nova pasta.png/1-removebg-preview-removebg-preview.png" width="70px">
+      <h1>Recicle.bem</h1>
+    </div>
+    <p>Conectando pessoas, regenerando o planeta</p>
+  </header>
+  
+  <nav>
+    <ul>
+      <li><a href="./inicio2.html">Início</a></li>
+      <li><a href="./doar.html">Doar</a></li> 
+     <li><a href="./contato.html">Contato</a></li>
+      <li><a href="./sobre.html">Sobre Nós</a></li>
+      <li><a href="./solicitar.html">Solicitação</a></li>
+      <li> <a href="./inicio3.html">Jogo Educativo</a></li> 
+
+
+    </ul>
+  </nav>
+  
+  <main>
+    <section class="about-section">
+      <h2>Sobre a Recicle.bem</h2>
+      <p>A Recicle.bem nasceu da paixão por um planeta mais sustentável e da crença no poder da economia circular. Somos uma plataforma dedicada a facilitar a doação e recepção de produtos biodegradáveis, promovendo um estilo de vida mais consciente e ecológico.</p>
+      
+      <div class="mission-vision">
+        <div class="mission">
+          <h3>Nossa Missão</h3>
+          <p>Facilitar a troca de produtos biodegradáveis, reduzindo o impacto ambiental e promovendo a conscientização sobre consumo sustentável.</p>
+        </div>
+        <div class="vision">
+          <h3>Nossa Visão</h3>
+          <p>Um mundo onde o consumo consciente e a economia circular são a norma, não a exceção, resultando em um planeta mais saudável para as gerações futuras.</p>
+        </div>
+      </div>
+    </section>
+    
+    <section class="team-section">
+      <h2>Nossa Equipe</h2>
+      <div class="team-grid">
+        <div class="team-member">
+          <img src="Nova pasta.png/image.png" alt="Foto de JOSE NETO, Desenvolvedor Chefe da Recicle.bem" width="150" height="150">
+          <h3>JOSE NETO </h3>
+          <p>Desenvolvedor Chefe</p>
+        </div>
+        <div class="team-member">
+          <img src="Nova pasta.png/300341.jpg" alt="Foto de kaio, Diretor de Operações da Recicle.bem" width="150" height="150">
+          <h3> KAIO SOARES</h3>
+          <p>Diretor de Operações</p>
+        </div>
+        <div class="team-member">
+          <img src="Nova pasta.png/download (10).png" alt="Foto de raquel, Especialista em Sustentabilidade da Recicle.bem" width="150" height="150">
+          <h3> RAQUEL BARAUNA</h3>
+          <p>Especialista em Sustentabilidade</p>
+        </div>
+   
+      </div>
+    </section>
+    
+    <section class="eco-impact">
+      <h3>Nosso Impacto</h3>
+      <p>Desde o nosso lançamento, temos orgulho de ter contribuído significativamente para a redução do desperdício e a promoção de alternativas sustentáveis. Confira alguns números que refletem nosso impacto positivo:</p>
+      <div class="impact-stats">
+        <div class="stat-item">
+          <div class="stat-number">50.000+</div>
+          <div class="stat-label">Itens Trocados</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">5.000+</div>
+          <div class="stat-label">Usuários Ativos</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">10</div>
+          <div class="stat-label">Toneladas de CO2 Evitadas</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">100+</div>
+          <div class="stat-label">Parcerias com ONGs</div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2024 Recicle.bem. Todos os direitos reservados.</p>
+  </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Animação suave de scroll
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+
+  // Animação de entrada para os membros da equipe
+  const teamMembers = document.querySelectorAll('.team-member');
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  teamMembers.forEach(member => {
+    member.style.opacity = '0';
+    member.style.transform = 'translateY(20px)';
+    member.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    observer.observe(member);
+  });
+
+  // Contador animado para as estatísticas de impacto
+  const stats = document.querySelectorAll('.stat-number');
+  
+  const animateValue = (obj, start, end, duration) => {
+    let startTimestamp = null;
+    const step = (timestamp) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      obj.innerHTML = Math.floor(progress * (end - start) + start).toLocaleString();
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      }
+    };
+    window.requestAnimationFrame(step);
+  };
+
+  const statsObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const target = entry.target;
+        const end = parseInt(target.textContent.replace(/,/g, ''), 10);
+        animateValue(target, 0, end, 2000);
+        observer.unobserve(target);
+      }
+    });
+  }, observerOptions);
+
+  stats.forEach(stat => {
+    statsObserver.observe(stat);
+  });
+});
+</script>
+
+</body></html>

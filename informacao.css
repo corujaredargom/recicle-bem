@@ -1,0 +1,100 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.title {
+  background-image: url('');
+  background-size: cover;
+  background-position: center;
+  background-color: #39a650;
+  /* Cor do fundo do título */
+  padding: 30px;
+  text-align: center;
+  color: #ffffff;
+
+}
+.leaf-animation {
+  position: fixed;
+  top: -50px;
+  animation: falling 10s linear infinite;
+  z-index: -1;
+}
+
+@keyframes falling {
+  0% {
+    transform: translateY(-50px) rotate(0deg);
+  }
+
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+  }
+}
+/* Estilizar o botão */
+#start-button {
+  /* Definir o tamanho do botão */
+  width: 200px;
+  height: 50px;
+  /* Definir a cor e o fundo do botão */
+  color: #ffffff;
+  background-color: #39a650;
+  /* Definir o raio da borda do botão */
+  border-radius: 10px;
+  /* Definir o tamanho e a família da fonte do botão */
+  font-size: 24px;
+  font-family: Arial, sans-serif;
+  /* Adicionar algum padding ao botão */
+  padding: 10px 20px;
+  /* Fazer o cursor do botão um ponteiro */
+  cursor: pointer;
+  /* Adicionar alguns efeitos de transição ao botão */
+  transition: background-color #39a650 0.3s, color #39a650 0.3s;
+  margin: 0 auto;
+  /* adiciona um espaço igual em ambos os lados do botão */
+}
+
+.mensagem-container {
+  width: 80%;
+  /* largura do container */
+  margin: 40px auto;
+  /* adiciona um espaço igual em ambos os lados do container */
+  padding: 20px;
+  /* adiciona um espaço interno ao container */
+  background-color: #39a650;
+  /* cor de fundo do container */
+  border: 1px solid #39a650;
+  /* borda do container */
+  border-radius: 10px;
+  /* arredondamento das bordas do container */
+  box-shadow: 0 0 10px rgb(85, 255, 88);
+  /* sombra do container */
+}
+
+.mensagem {
+  margin-bottom: 20px;
+  /* adiciona um espaço entre as mensagens */
+  padding: 10px;
+  /* adiciona um espaço interno à mensagem */
+  background-color: #ffffff;
+  /* cor de fundo da mensagem */
+  border: 1px solid #39a650;
+  /* borda da mensagem */
+  border-radius: 10px;
+  /* arredondamento das bordas da mensagem */
+}
+
+.mensagem p {
+  font-size: 16px;
+  /* tamanho da fonte da mensagem */
+  color: #000000;
+  /* cor da fonte da mensagem */
+  justify-content: baseline;
+}
+
+.mensagem.f {
+  background-color:#ffffff;
+}
+
+.f {
+  color: #ffffff;
+}

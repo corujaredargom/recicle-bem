@@ -1,0 +1,350 @@
+<html><head><base href=>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recicle.bem - Transformando Resíduos em Oportunidades</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@600;700&display=swap');
+    
+      :root {
+        --primary-color: #2ecc71;
+        --primary-dark: #27ae60;
+        --secondary-color: #27ae60;
+        --text-dark: #2c3e50;
+        --text-light: #7f8c8d;
+        --background: #f9f9f9;
+        --white: #ffffff;
+      }
+    
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+    
+      body {
+        font-family: 'Roboto', sans-serif;
+        color: var(--text-dark);
+        line-height: 1.6;
+      }
+    
+      .header {
+        background-color: var(--white);
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+      }
+    
+      .nav-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    
+      .logo {
+        color: var(--primary-color);
+        text-decoration: none;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+    
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+      }
+    
+      .nav-links a {
+        color: var(--text-dark);
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+    
+      .nav-links a:hover {
+        color: var(--primary-color);
+      }
+    
+      .btn {
+        padding: 0.8rem 1.5rem;
+        border-radius: 25px;
+        font-weight: 500;
+        text-decoration: none;
+        transition: all 0.3s;
+      }
+    
+      .btn-primary {
+        background-color: var(--primary-color);
+        color: var(--white);
+      }
+    
+      .btn-primary:hover {
+        background-color: var(--primary-dark);
+        transform: translateY(-2px);
+      }
+    
+      .hero {
+        background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+        padding: 8rem 0 6rem;
+        margin-top: 60px;
+        color: var(--white);
+        text-align: center;
+      }
+    
+      .hero-content {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+    
+      .hero h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
+      }
+    
+      .hero p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        opacity: 0.9;
+      }
+    
+      .features {
+        padding: 5rem 0;
+        background-color: var(--background);
+      }
+    
+      .features-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+      }
+    
+      .feature-card {
+        background: var(--white);
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        text-align: center;
+        transition: transform 0.3s;
+      }
+    
+      .feature-card:hover {
+        transform: translateY(-5px);
+      }
+    
+      .feature-icon {
+        width: 60px;
+        height: 60px;
+        margin: 0 auto 1rem;
+        fill: var(--primary-color);
+      }
+    
+      .feature-card h3 {
+        margin-bottom: 1rem;
+        color: var(--text-dark);
+      }
+    
+      .how-it-works {
+        padding: 5rem 0;
+      }
+    
+      .section-title {
+        text-align: center;
+        margin-bottom: 3rem;
+        font-family: 'Montserrat', sans-serif;
+      }
+    
+      .steps-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+      }
+    
+      .step-card {
+        text-align: center;
+        padding: 2rem;
+      }
+    
+      .step-number {
+        width: 40px;
+        height: 40px;
+        background: var(--primary-color);
+        color: var(--white);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1rem;
+        font-weight: 700;
+      }
+    
+      .cta-section {
+        padding: 5rem 0;
+        color: var(--white);
+        text-align: center;
+      }
+    
+      .cta-content {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+    
+      .footer {
+        background: #4CAF50;
+        color: var(--white);
+        padding: 3rem 0;
+      }
+    
+      .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+      }
+    
+      .footer h4 {
+        margin-bottom: 1rem;
+      }
+    
+      .footer-links {
+        list-style: none;
+      }
+    
+      .footer-links li {
+        margin-bottom: 0.5rem;
+      }
+    
+      .footer-links a {
+        color: var(--white);
+        text-decoration: none;
+        opacity: 0.8;
+        transition: opacity 0.3s;
+      }
+    
+      .footer-links a:hover {
+        opacity: 1;
+      }
+    
+      @media (max-width: 768px) {
+        .nav-links {
+          display: none;
+        }
+    
+        .hero h1 {
+          font-size: 2rem;
+        }
+    
+        .features-container {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+    </head>
+    <body>
+      <header class="header">
+        <nav class="nav-container">
+          <a href="./inicio.html" class="logo">Recicle.bem</a>
+          <div class="nav-links">
+            <a href="./sobre.html">Sobre</a>
+            <a href="./doar.html">Doar</a>
+            <a href="./contato.html">Contato</a>
+            <a href="./inicio3.html">Jogo Educativo</a>
+            <a href="./login.html" class="btn btn-primary">Entrar</a>
+          </div>
+        </nav>
+      </header>
+    
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Transforme Resíduos em Oportunidades</h1>
+          <p>Conectamos pessoas que querem doar materiais recicláveis com quem precisa. Juntos, podemos criar um mundo mais sustentável.</p>
+          <a href="./cadastro.html" class="btn btn-primary">Comece Agora</a>
+        </div>
+      </section>
+    
+      <section class="features">
+        <div class="features-container">
+          <div class="feature-card">
+            <svg class="feature-icon" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+            </svg>
+            <h3>Doação Simplificada</h3>
+            <p>Processo fácil e rápido para doar seus materiais recicláveis</p>
+          </div>
+          <div class="feature-card">
+            <svg class="feature-icon" viewBox="0 0 24 24">
+              <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+            </svg>
+            <h3>Comunidade Engajada</h3>
+            <p>Conecte-se com pessoas que compartilham seus valores</p>
+          </div>
+          <div class="feature-card">
+            <svg class="feature-icon" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.31-8.86c-1.77-.45-2.34-.94-2.34-1.67 0-.84.79-1.43 2.1-1.43 1.38 0 1.9.66 1.94 1.64h1.71c-.05-1.34-.87-2.57-2.49-2.97V5H10.9v1.69c-1.51.32-2.72 1.3-2.72 2.81 0 1.79 1.49 2.69 3.66 3.21 1.95.46 2.34 1.15 2.34 1.87 0 .53-.39 1.39-2.1 1.39-1.6 0-2.23-.72-2.32-1.64H8.04c.1 1.7 1.36 2.66 2.86 2.97V19h2.34v-1.67c1.52-.29 2.72-1.16 2.73-2.77-.01-2.2-1.9-2.96-3.66-3.42z"/>
+            </svg>
+            <h3>Impacto Ambiental</h3>
+            <p>Contribua para um planeta mais limpo e sustentável</p>
+          </div>
+        </div>
+      </section>
+    
+      <section class="how-it-works">
+        <h2 class="section-title">Como Funciona</h2>
+        <div class="steps-container">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <h3>Cadastre-se</h3>
+            <p>Crie sua conta gratuitamente em poucos minutos</p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <h3>Anuncie</h3>
+            <p>Publique os materiais que você quer doar</p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <h3>Conecte</h3>
+            <p>Entre em contato com interessados e faça a diferença</p>
+          </div>
+        </div>
+      </section>
+    
+      <footer class="footer">
+        <div class="footer-content">
+          <div>
+            <h4>Recicle.bem</h4>
+            <p>Transformando resíduos em oportunidades</p>
+          </div>
+          <div>
+            <h4>Links Úteis</h4>
+            <ul class="footer-links">
+              <li><a href="./sobre.html">Sobre Nós</a></li>
+              <li><a href="./como.funciona.html">Como Funciona</a></li>
+              <li><a href="./termos.html">Termos de Uso</a></li>
+              <li><a href="./politica.html">Política de Privacidade</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Contato</h4>
+            <ul class="footer-links">
+              <li><a href="mailto:contato@recicle.bem.com">ccontato@recicle.bem.com</a></li>
+              <li><a href="tel:+55(11) 1234-5678"> (11) 1234-5678</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </body></html>
