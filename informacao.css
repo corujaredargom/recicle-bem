@@ -81,6 +81,7 @@ body {
   /* borda da mensagem */
   border-radius: 10px;
   /* arredondamento das bordas da mensagem */
+  font-family: "EB Garamond", serif;
 }
 
 .mensagem p {
